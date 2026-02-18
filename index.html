@@ -1,41 +1,71 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>朵茉記帳 - 法律資訊</title>
+    <title>Doumo - Legal</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 40px 20px; }
-        .container { max-width: 600px; margin: 0 auto; }
-        h1 { text-align: center; color: #333; margin-bottom: 40px; }
-        .card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        .card h2 { color: #4A90A4; margin-bottom: 12px; }
-        .card p { color: #666; line-height: 1.6; }
-        .card a { color: #4A90A4; text-decoration: none; font-weight: 600; }
-        .card a:hover { text-decoration: underline; }
-        .logo { text-align: center; margin-bottom: 20px; font-size: 48px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .container { background: white; border-radius: 24px; padding: 48px; max-width: 600px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); text-align: center; }
+        .logo { width: 80px; height: 80px; margin-bottom: 24px; border-radius: 18px; }
+        h1 { color: #333; margin-bottom: 8px; font-size: 28px; }
+        .subtitle { color: #666; margin-bottom: 32px; }
+        .lang-section { margin-bottom: 24px; }
+        .lang-title { font-size: 14px; color: #999; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .links { display: flex; flex-direction: column; gap: 12px; }
+        .link-row { display: flex; gap: 12px; }
+        .link { flex: 1; display: block; padding: 16px 24px; background: #f5f7fa; border-radius: 12px; color: #4A90A4; text-decoration: none; font-weight: 500; transition: all 0.2s; }
+        .link:hover { background: #4A90A4; color: white; transform: translateY(-2px); }
+        .divider { height: 1px; background: #eee; margin: 24px 0; }
+        .footer { color: #999; font-size: 14px; margin-top: 24px; }
+        .footer a { color: #4A90A4; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">🌱</div>
-        <h1>朵茉記帳</h1>
-        <div class="card">
-            <h2>📄 使用條款</h2>
-            <p>了解使用朵茉記帳 App 的相關條款與規範。</p>
-            <p style="margin-top: 12px;"><a href="terms.html">查看使用條款 →</a></p>
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8f/f4/53/8ff45350-f0da-3b9a-5b0d-77eba6b5c0e9/AppIcon-0-0-1x_U007epad-0-85-220.png/460x0w.webp" alt="Doumo" class="logo">
+        <h1>Doumo</h1>
+        <p class="subtitle">Personal Finance Management</p>
+        
+        <!-- 繁體中文 -->
+        <div class="lang-section">
+            <div class="lang-title">🇹🇼 繁體中文</div>
+            <div class="link-row">
+                <a href="terms.html" class="link">使用條款</a>
+                <a href="privacy.html" class="link">隱私政策</a>
+            </div>
         </div>
-        <div class="card">
-            <h2>🔒 隱私政策</h2>
-            <p>了解我們如何收集、使用和保護您的個人資料。</p>
-            <p style="margin-top: 12px;"><a href="privacy.html">查看隱私政策 →</a></p>
+
+        <!-- English -->
+        <div class="lang-section">
+            <div class="lang-title">🇺🇸 English</div>
+            <div class="link-row">
+                <a href="terms-en.html" class="link">Terms of Service</a>
+                <a href="privacy-en.html" class="link">Privacy Policy</a>
+            </div>
         </div>
-        <div class="card">
-            <h2>📧 聯絡我們</h2>
-            <p>如有任何問題或建議，歡迎來信：</p>
-            <p style="margin-top: 12px;"><a href="mailto:4006wayne@gmail.com">4006wayne@gmail.com</a></p>
+
+        <!-- 简体中文 -->
+        <div class="lang-section">
+            <div class="lang-title">🇨🇳 简体中文</div>
+            <div class="link-row">
+                <a href="terms-zh-Hans.html" class="link">使用条款</a>
+                <a href="privacy-zh-Hans.html" class="link">隐私政策</a>
+            </div>
         </div>
+
+        <!-- 日本語 -->
+        <div class="lang-section">
+            <div class="lang-title">🇯🇵 日本語</div>
+            <div class="link-row">
+                <a href="terms-ja.html" class="link">利用規約</a>
+                <a href="privacy-ja.html" class="link">プライバシーポリシー</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <p class="footer">© 2026 Wayne · <a href="mailto:4006wayne@gmail.com">Contact</a></p>
     </div>
 </body>
 </html>
