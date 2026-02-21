@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朵茉記帳 - 讓記帳變得輕鬆有趣</title>
+    <meta name="description" content="朵茉記帳是一款清新可愛的個人記帳 App，幫助你輕鬆管理財務，養成良好的理財習慣。">
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(180deg, #FFF5F5 0%, #FFE5E5 50%, #FFF5F5 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            box-shadow: 0 10px 40px rgba(232, 160, 160, 0.3);
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #E8A0A0, #D88A8A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tagline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Features */
+        .features {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #E8A0A0;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Highlights */
+        .highlights {
+            background: white;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        .highlight-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .highlight-check {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #E8A0A0, #D88A8A);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .highlight-text h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .highlight-text p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 14px;
+        }
+        .footer-links {
+            margin-bottom: 16px;
+        }
+        .footer-links a {
+            color: #E8A0A0;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="app-icon.png" alt="朵茉記帳" class="logo">
+        <h1>朵茉記帳</h1>
+        <p class="tagline">讓記帳變得輕鬆有趣 🌸</p>
+        <a href="https://apps.apple.com/app/id6740513282" class="download-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            App Store 下載
+        </a>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">✨ 功能特色</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>快速記帳</h3>
+                <p>一鍵記錄收入支出<br>輕鬆養成記帳習慣</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>統計分析</h3>
+                <p>直覺化圖表報表<br>掌握金錢流向</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>多帳戶</h3>
+                <p>現金、銀行、電子錢包<br>分類管理更清楚</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>預算管理</h3>
+                <p>設定每月預算<br>超支即時提醒</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🐷</div>
+                <h3>儲蓄目標</h3>
+                <p>追蹤存錢進度<br>達成理財目標</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3>雲端備份</h3>
+                <p>iCloud 自動同步<br>資料安全無憂</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <h2 class="section-title">💖 為什麼選擇朵茉？</h2>
+        <div class="highlight-list">
+            <div class="highlight-item">
+                <div class="highlight-check">✓</div>
+                <div class="highlight-text">
+                    <h4>清新可愛的介面設計</h4>
+                    <p>療癒系配色與可愛圖示，讓記帳不再枯燥</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-check">✓</div>
+                <div class="highlight-text">
+                    <h4>簡單直覺的操作體驗</h4>
+                    <p>三秒完成記帳，不打斷你的生活節奏</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-check">✓</div>
+                <div class="highlight-text">
+                    <h4>完整的統計報表</h4>
+                    <p>圓餅圖、長條圖、折線圖，一目瞭然</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-check">✓</div>
+                <div class="highlight-text">
+                    <h4>支援多種貨幣</h4>
+                    <p>全球幣種與即時匯率，出國也能輕鬆記</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-check">✓</div>
+                <div class="highlight-text">
+                    <h4>桌面小工具</h4>
+                    <p>iOS Widget 快速記帳，一鍵開啟</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">隱私政策</a>
+            <a href="terms.html">使用條款</a>
+            <a href="support.html">支援中心</a>
+        </div>
+        <p>© 2026 朵茉記帳 Doumo</p>
+    </footer>
+</body>
+</html>
