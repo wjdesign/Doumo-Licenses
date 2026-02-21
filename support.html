@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朵茉記帳 - 支援中心</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #FFE5E5 0%, #FFF5F5 100%); 
+            min-height: 100vh; 
+            padding: 20px;
+        }
+        .container { 
+            background: white; 
+            border-radius: 24px; 
+            padding: 48px; 
+            max-width: 600px; 
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1); 
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .logo { 
+            width: 80px; 
+            height: 80px; 
+            margin-bottom: 16px; 
+            border-radius: 18px; 
+        }
+        h1 { 
+            color: #333; 
+            margin-bottom: 8px; 
+            font-size: 28px; 
+        }
+        .subtitle { 
+            color: #666; 
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-item {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .faq-a {
+            color: #666;
+            line-height: 1.6;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #4A90A4 0%, #357A8C 100%);
+            border-radius: 16px;
+            padding: 24px;
+            color: white;
+            text-align: center;
+        }
+        .contact-box h3 {
+            margin-bottom: 12px;
+        }
+        .contact-box p {
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+        .contact-box a {
+            display: inline-block;
+            background: white;
+            color: #4A90A4;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-box a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #999;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #4A90A4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="app-icon.png" alt="朵茉記帳" class="logo">
+            <h1>支援中心</h1>
+            <p class="subtitle">我們隨時為您提供協助</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">❓ 常見問題</div>
+            
+            <div class="faq-item">
+                <div class="faq-q">如何記錄一筆支出？</div>
+                <div class="faq-a">點擊首頁下方的「+」按鈕，選擇類別、輸入金額即可快速記帳。您也可以使用首頁的快速記帳按鈕。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">資料會自動備份嗎？</div>
+                <div class="faq-a">是的！您可以在「我的」→「iCloud 備份」中開啟自動備份功能，資料會安全地儲存在您的 iCloud。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">如何查看統計報表？</div>
+                <div class="faq-a">點擊底部「統計」頁籤，可以查看每日、每週、每月的收支統計和圖表分析。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">Pro 會員有什麼功能？</div>
+                <div class="faq-a">Pro 會員可享有無限帳戶、自訂類別、進階統計報表、資料匯出等功能。</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="contact-box">
+                <h3>📧 聯繫我們</h3>
+                <p>如果您有任何問題或建議，歡迎來信！<br>我們會盡快回覆您。</p>
+                <a href="mailto:doumo.feedback@gmail.com">doumo.feedback@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                <a href="terms.html">使用條款</a> · 
+                <a href="privacy.html">隱私政策</a>
+            </p>
+            <p style="margin-top: 8px;">© 2026 朵茉記帳</p>
+        </div>
+    </div>
+</body>
+</html>
