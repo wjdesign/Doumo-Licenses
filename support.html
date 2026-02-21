@@ -79,7 +79,13 @@
             opacity: 0.9;
             margin-bottom: 16px;
         }
-        .contact-box a {
+        .contact-box .email-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .contact-box a.email-link {
             display: inline-block;
             background: white;
             color: #4A90A4;
@@ -88,9 +94,49 @@
             text-decoration: none;
             font-weight: 600;
         }
-        .contact-box a:hover {
+        .contact-box a.email-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .copy-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .copy-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #4A90A4;
+        }
+        .copy-btn.copied svg {
+            fill: #22c55e;
+        }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #333;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
         }
         .footer {
             text-align: center;
@@ -140,7 +186,15 @@
             <div class="contact-box">
                 <h3>📧 聯繫我們</h3>
                 <p>如果您有任何問題或建議，歡迎來信！<br>我們會盡快回覆您。</p>
-                <a href="mailto:doumo.feedback@gmail.com">doumo.feedback@gmail.com</a>
+                <div class="email-row">
+                    <a href="mailto:doumo.feedback@gmail.com" class="email-link">doumo.feedback@gmail.com</a>
+                    <button class="copy-btn" onclick="copyEmail()" title="複製信箱">
+                        <svg viewBox="0 0 24 24" id="copyIcon">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="toast" id="toast">已複製到剪貼簿 ✓</div>
             </div>
         </div>
 
@@ -152,5 +206,19 @@
             <p style="margin-top: 8px;">© 2026 朵茉記帳</p>
         </div>
     </div>
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText('doumo.feedback@gmail.com').then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const toast = document.getElementById('toast');
+                btn.classList.add('copied');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    toast.classList.remove('show');
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
